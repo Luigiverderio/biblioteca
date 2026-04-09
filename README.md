@@ -18,6 +18,14 @@ No Windows:
 winget install OpenJS.NodeJS.LTS
 ```
 
+No macOS (Homebrew):
+
+```bash
+brew install node
+```
+
+Se voce nao usa Homebrew, pode instalar pelo instalador oficial em nodejs.org.
+
 ### 2) Confirmar instalacao
 
 ```bash
