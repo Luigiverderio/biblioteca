@@ -24,6 +24,30 @@ npm run dev
 
 Depois disso, abra o link mostrado no terminal (normalmente http://localhost:5173).
 
+## Sem npm?
+
+Sem problema. O npm vem junto com o Node.js.
+
+No Windows, voce pode instalar o Node.js LTS com:
+
+```bash
+winget install OpenJS.NodeJS.LTS
+```
+
+Depois, feche e abra o terminal novamente e confira:
+
+```bash
+node -v
+npm -v
+```
+
+Se voce nao puder instalar agora, ainda da para fazer quase tudo do desafio usando apenas Python:
+
+1. Edite o arquivo funcoes_biblioteca.py.
+2. Rode os testes com pytest para validar sua solucao.
+
+Nesse caso, voce so nao vai abrir o enunciado via npm run dev.
+
 ## Onde escrever a solucao
 
 Implemente sua resposta no arquivo:
