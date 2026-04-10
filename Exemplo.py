@@ -17,7 +17,7 @@ emprestimos = [
     {"id_livro": 7, "usuario": "Carla",  "dias_restantes": -2},
     {"id_livro": 5, "usuario": "Ana",    "dias_restantes": 10},
 ]
-
+nome_usuario = 'Ana'
 print(livros_disponiveis(acervo, emprestimos))
 
 # Saída esperada:
@@ -47,24 +47,24 @@ print(contagem_por_genero(acervo))
 # Saída esperada:
 ## {"romance": 6, "conto": 2}
 
-print(autor_mais_emprestado(acervo, emprestimos))
+# print(autor_mais_emprestado(acervo, emprestimos))
 
 # Saída esperada: "Machado de Assis"
 
 print(relatorio_usuario(acervo, emprestimos, nome_usuario))
 
-# Saída esperada:
+# # Saída esperada:
 
-'''
-{
-    "usuario": "Ana",
-    "livros_com_prazo": ["Dom Casmurro", "Vidas Secas"],
-    "livros_atrasados": [],
-    "total_emprestimos": 2
-}
-'''
+# '''
+# {
+#     "usuario": "Ana",
+#     "livros_com_prazo": ["Dom Casmurro", "Vidas Secas"],
+#     "livros_atrasados": [],
+#     "total_emprestimos": 2
+# }
+# '''
 
-print(ivro_mais_antigo_disponivel(acervo, emprestimos))
+print(livro_mais_antigo_disponivel(acervo, emprestimos))
 
-# Saída esperada:
-# {"id": 6, "titulo": "Iracema", "autor": "José de Alencar", "ano": 1865, "genero": "romance"}
+# # Saída esperada:
+# # {"id": 6, "titulo": "Iracema", "autor": "José de Alencar", "ano": 1865, "genero": "romance"}
