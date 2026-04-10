@@ -49,6 +49,8 @@ brew install node
 
 Se preferir, use o instalador oficial em nodejs.org.
 
+Depois de instalar o Node.js, reinicie o VS Code antes de continuar.
+
 ### 2) Confirmar instalacao
 
 ```bash
