@@ -22,10 +22,15 @@ Entre na pasta do projeto:
 cd biblioteca
 ```
 
-Instale as dependencias e abra o enunciado:
+Instale as dependencias:
 
 ```bash
 npm install
+```
+
+Inicie o servidor do enunciado (passo obrigatorio):
+
+```bash
 npm run dev
 ```
 
@@ -58,10 +63,15 @@ node -v
 npm -v
 ```
 
-### 3) Instalar dependencias e abrir o enunciado
+### 3) Instalar dependencias
 
 ```bash
 npm install
+```
+
+### 4) Iniciar o enunciado com Vite (obrigatorio)
+
+```bash
 npm run dev
 ```
 
