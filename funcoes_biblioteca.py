@@ -1,1 +1,1 @@
-## Digite sua solução aqui!
+def livros_disponiveis(acervo, emprestimos)

@@ -1,44 +1,55 @@
 # Desafio Pre-Prova - Biblioteca
 
-Projeto de treino para praticar logica de programacao com Python, usando testes automatizados para validar a solucao.
+Projeto de treino para praticar logica de programacao com Python, com testes automatizados para validar a solucao.
 
-## O que voce precisa fazer
+## Objetivo
 
-1. Ler o enunciado no navegador.
-2. Implementar as funcoes no arquivo de solucao.
-3. Rodar os testes e corrigir ate passar tudo.
+1. Abrir o enunciado no navegador.
+2. Implementar as funcoes em `funcoes_biblioteca.py`.
+3. Rodar os testes ate passar tudo.
 
-## Setup rapido
+## Caminho rapido (2 minutos)
 
-Antes de rodar qualquer comando, entre na pasta do projeto.
+Entre na pasta do projeto.
 
-No Windows (PowerShell):
+Windows (PowerShell):
 
 ```bash
 cd "C:\Users\luigi\OneDrive\Área de Trabalho\Insper\Estudos\biblioteca"
 ```
 
-No macOS (zsh/bash):
+macOS (zsh/bash):
 
 ```bash
 cd ~/caminho/para/biblioteca
 ```
 
-### 1) Instalar Node.js (o npm vem junto)
+Abra o enunciado:
 
-No Windows:
+```bash
+npm install
+npm run dev
+```
+
+No terminal, abra o link exibido (geralmente `http://localhost:5173`).
+
+## Passo a passo completo
+
+### 1) Instalar Node.js (com npm)
+
+Windows:
 
 ```bash
 winget install OpenJS.NodeJS.LTS
 ```
 
-No macOS (Homebrew):
+macOS (Homebrew):
 
 ```bash
 brew install node
 ```
 
-Se voce nao usa Homebrew, pode instalar pelo instalador oficial em nodejs.org.
+Se preferir, use o instalador oficial em nodejs.org.
 
 ### 2) Confirmar instalacao
 
@@ -47,104 +58,75 @@ node -v
 npm -v
 ```
 
-### 3) Instalar dependencias do front
+### 3) Instalar dependencias e abrir o enunciado
 
 ```bash
 npm install
-```
-
-### 4) Abrir o enunciado
-
-```bash
 npm run dev
 ```
 
-Depois disso, abra o link mostrado no terminal (normalmente http://localhost:5173).
+## Onde implementar
 
-Se voce nao puder instalar o Node agora, ainda da para fazer quase tudo do desafio usando apenas Python:
+Implemente sua solucao em `funcoes_biblioteca.py`.
 
-1. Edite o arquivo funcoes_biblioteca.py.
-2. Rode os testes com pytest para validar sua solucao.
+`Gabarito.py` pode ser usado como referencia.
 
-Nesse caso, voce so nao vai abrir o enunciado via npm run dev.
+## Rodando os testes (recomendado)
 
-## Onde escrever a solucao
+Use ambiente virtual para evitar conflito de pacotes.
 
-Implemente sua resposta no arquivo:
+Se ainda nao estiver na pasta do projeto:
 
-- funcoes_biblioteca.py
-
-## Como rodar os testes
-
-Recomendado: usar ambiente virtual (venv).
-
-Se ainda nao estiver na pasta do projeto, entre nela:
-
-No Windows (PowerShell):
+Windows:
 
 ```bash
 cd "C:\Users\luigi\OneDrive\Área de Trabalho\Insper\Estudos\biblioteca"
 ```
 
-No macOS (zsh/bash):
+macOS:
 
 ```bash
 cd ~/caminho/para/biblioteca
 ```
 
-No Windows (PowerShell):
+Crie e ative a venv:
+
+Windows:
 
 ```bash
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-No macOS (zsh/bash):
+macOS:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Instale as dependencias de teste:
+Instale dependencias de teste e execute:
 
 ```bash
 pip install pytest pytest-timeout
-```
-
-Agora rode os testes:
-
-```bash
 pytest -q
 ```
 
-## Prompt pronto para configurar testes no VS Code
+## VS Code: configurar Testing pelo terminal (testes)
 
-Se quiser automatizar isso com Copilot Chat, copie e cole o prompt abaixo:
+No Windows (PowerShell), este comando cria `.vscode/settings.json` com Pytest habilitado:
 
-```text
-Configure o ambiente de testes Python deste repositório no VS Code, sem perguntar nada.
-1. Selecione Pytest como framework.
-2. Use a pasta raiz do projeto para descoberta.
-3. Use padrão de arquivos test_*.py.
-4. Garanta que o interpretador ativo seja da venv do projeto:
-	- prefira .venv
-	- se não existir, use .venv_clean
-5. Se faltar dependência, instale na venv ativa: pytest e pytest-timeout.
-6. Crie ou ajuste as configurações necessárias para o VS Code não pedir isso de novo.
-7. Rode descoberta de testes e execute pytest -q.
-8. No fim, mostre um resumo curto com:
-	- interpretador selecionado
-	- pacotes instalados
-	- quantidade de testes descobertos
-	- resultado da execução
+```bash
+New-Item -ItemType Directory -Force .vscode | Out-Null
+@'
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [".", "-q"],
+  "python.testing.cwd": "${workspaceFolder}"
+}
+'@ | Set-Content .vscode/settings.json -Encoding UTF8
 ```
-
-## Estrutura principal
-
-- index.html e src/: interface com o enunciado
-- test_solution.py: testes automatizados
-- funcoes_biblioteca.py: arquivo da sua implementacao
-- Gabarito.py: referencia de solucao
 
 Bom estudo e boa prova.
