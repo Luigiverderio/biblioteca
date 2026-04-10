@@ -62,16 +62,31 @@ Implemente sua resposta no arquivo:
 
 ## Como rodar os testes
 
-Se voce ja tiver o pytest instalado:
+Recomendado: usar ambiente virtual (venv).
+
+No Windows (PowerShell):
 
 ```bash
-pytest -q
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 ```
 
-Se nao tiver:
+No macOS (zsh/bash):
 
 ```bash
-pip install pytest
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Instale as dependencias de teste:
+
+```bash
+pip install pytest pytest-timeout
+```
+
+Agora rode os testes:
+
+```bash
 pytest -q
 ```
 
