@@ -8,23 +8,21 @@ Projeto de treino para praticar logica de programacao com Python, com testes aut
 2. Implementar as funcoes em `funcoes_biblioteca.py`.
 3. Rodar os testes ate passar tudo.
 
-## Caminho rapido (2 minutos)
+## Como clonar e instalar
 
-Entre na pasta do projeto.
-
-Windows (PowerShell):
+Clone este repositorio na sua maquina:
 
 ```bash
-cd "C:\Users\luigi\OneDrive\Área de Trabalho\Insper\Estudos\biblioteca"
+git clone https://github.com/Luigiverderio/biblioteca.git
 ```
 
-macOS (zsh/bash):
+Entre na pasta do projeto:
 
 ```bash
-cd ~/caminho/para/biblioteca
+cd biblioteca
 ```
 
-Abra o enunciado:
+Instale as dependencias e abra o enunciado:
 
 ```bash
 npm install
@@ -75,18 +73,10 @@ Implemente sua solucao em `funcoes_biblioteca.py`.
 
 Use ambiente virtual para evitar conflito de pacotes.
 
-Se ainda nao estiver na pasta do projeto:
-
-Windows:
+Se ainda nao estiver na pasta do projeto, entre com:
 
 ```bash
-cd "C:\Users\luigi\OneDrive\Área de Trabalho\Insper\Estudos\biblioteca"
-```
-
-macOS:
-
-```bash
-cd ~/caminho/para/biblioteca
+cd biblioteca
 ```
 
 Crie e ative a venv:
